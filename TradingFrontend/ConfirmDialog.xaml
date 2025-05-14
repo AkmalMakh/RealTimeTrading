@@ -1,0 +1,72 @@
+﻿<Window x:Class="TradingFrontend.ConfirmDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Confirm Trade"
+        Height="240" Width="420"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#FAFAFA"
+        AllowsTransparency="False">
+
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Top bar with X button -->
+            <Grid Grid.Row="0" Background="#FAFAFA">
+                <TextBlock Text="Confirm Trade"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           Margin="10,5,40,5"
+                           VerticalAlignment="Center" />
+                <Button Content="✕"
+                        Width="30"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        Margin="0,5,5,0"
+                        VerticalAlignment="Top"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="14"
+                        Click="Cancel_Click" />
+            </Grid>
+
+            <!-- Message text -->
+            <TextBlock x:Name="MessageText"
+                       Grid.Row="1"
+                       Text="Are you sure you want to trade?"
+                       FontSize="17"
+                       FontWeight="SemiBold"
+                       Foreground="#333"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Margin="20" />
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,10">
+                <Button Content="Buy"
+                        Width="100"
+                        Height="35"
+                        Margin="10"
+                        Background="#4CAF50"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="Buy_Click"/>
+
+                <Button Content="Sell"
+                        Width="100"
+                        Height="35"
+                        Margin="10"
+                        Background="#1E88E5"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="Sell_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

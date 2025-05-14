@@ -1,0 +1,6 @@
+@TradingBackend_HostAddress = http://localhost:5192
+
+GET {{TradingBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
