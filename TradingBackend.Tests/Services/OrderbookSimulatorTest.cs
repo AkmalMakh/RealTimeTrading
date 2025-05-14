@@ -109,7 +109,7 @@ namespace TradingBackend.Tests.Services
             if (File.Exists(testFilePath))
                 File.Delete(testFilePath);
 
-            // Act: Invoke private method that saves trades
+            // Act: Invoke method that saves trades
             File.WriteAllText(testFilePath, JsonSerializer.Serialize(tradeList));
 
             // Assert

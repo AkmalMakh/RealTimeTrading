@@ -12,7 +12,7 @@ namespace TradingFrontend
             InitializeComponent();
 
             _signalRService = new SignalRService();
-            _signalRService.ConnectAsync(); // connect on startup
+            _signalRService.ConnectAsync();
             if (TickerComboBox != null)
             {
                 TickerComboBox.ItemsSource = new[]
@@ -24,7 +24,7 @@ namespace TradingFrontend
             }
             else
             {
-                MessageBox.Show("⚠️ TickerComboBox is null");
+                MessageBox.Show("TickerComboBox is empty");
             }
         }
 

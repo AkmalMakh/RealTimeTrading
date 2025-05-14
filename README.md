@@ -65,4 +65,17 @@ flowchart TD
     cd TradingFrontend
    dotnet build
    dotnet run
+3. Run Unit test 
+   dotnet test TradingBackend.Tests
+   or 
+   dotnet test --logger:"console;verbosity=detailed"
 
+## Configuration
+
+To ensure the frontend connects to the correct backend endpoint, confirm that the URL in `SignalRService.cs` matches your running backend's address:
+
+```csharp
+_connection = new HubConnectionBuilder()
+    .WithUrl("http://localhost:5192/market")
+    .WithAutomaticReconnect()
+    .Build();
