@@ -65,7 +65,8 @@ flowchart TD
     cd TradingFrontend
    dotnet build
    dotnet run
-3. Run Unit test 
+3. Run Unit test
+   ```bash
    dotnet test TradingBackend.Tests
    or 
    dotnet test --logger:"console;verbosity=detailed"
